@@ -1,0 +1,28 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+  <ActionBar title="Pokémon Type Quiz" class="action-bar"></ActionBar>
+
+  <StackLayout class="m-20">
+    <Label class="h3" text="If you use an attack of type:" />
+    <Label class="type" id="attack-type" />
+
+    <Label class="h3" text="Against a Pokémon of type:" />
+    <FlexboxLayout class="defender-types">
+      <Label class="type" id="defender-type-1" />
+      <Label class="type" id="defender-type-2" />
+    </FlexboxLayout>
+
+    <StackLayout class="hr-light"></StackLayout>
+
+    <Label class="h3 bubbles-label" text="What is the effect?" />
+    <FlexboxLayout class="bubbles">
+      <Button tap="answer" id="answer-000" text="0x" />
+      <Button tap="answer" id="answer-025" text="0.25x" />
+      <Button tap="answer" id="answer-050" text="0.5x" />
+    </FlexboxLayout>
+    <FlexboxLayout class="bubbles">
+      <Button tap="answer" id="answer-100" text="1x" />
+      <Button tap="answer" id="answer-200" text="2x" />
+      <Button tap="answer" id="answer-400" text="4x" />
+    </FlexboxLayout>
+  </StackLayout>
+</Page>
