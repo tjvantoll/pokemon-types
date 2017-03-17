@@ -1,0 +1,146 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+  navigatingTo="onNavigatingTo"
+  class="page">
+
+  <ActionBar
+    title="{{ type.name }}"
+    backgroundColor="{{ type.backgroundColor }}"
+    color="{{ type.color }}"
+    class="action-bar"></ActionBar>
+
+  <ScrollView>
+    <StackLayout class="m-20">
+      <Label class="h2" text="Attack" />
+      <StackLayout class="hr-light" />
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ attackSuperEffective.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="{{ type.name + '-type moves are ' }}" />
+              <Span text="super effective" fontAttributes="Bold" fontSize="16" />
+              <Span text=" against:" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ attackSuperEffective }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ attackNotEffective.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="{{ type.name + '-type moves are ' }}" />
+              <Span text="not very effective" fontAttributes="Bold" fontSize="16" />
+              <Span text=" against:" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ attackNotEffective }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ attackNoEffect.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="{{ type.name + '-type moves have ' }}" />
+              <Span text="no effect" fontAttributes="Bold" fontSize="16" />
+              <Span text=" against:" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ attackNoEffect }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label class="h2 m-t-20" text="Defense" />
+      <StackLayout class="hr-light" />
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ defenseSuperEffective.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="These types are " />
+              <Span text="super effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="{{ ' against ' + type.name + ' Pokémon:' }}" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ defenseSuperEffective }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ defenseNotEffective.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="These types are " />
+              <Span text="not very effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="{{ ' against ' + type.name + ' Pokémon:' }}" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ defenseNotEffective }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ defenseNoEffect.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="These types have " />
+              <Span text="no effect" fontAttributes="Bold" fontSize="16" />
+              <Span text="{{ ' on ' + type.name + ' Pokémon:' }}" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ defenseNoEffect }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+        </Repeater.itemTemplate>
+      </Repeater>
+    </StackLayout>
+  </ScrollView>
+</Page>

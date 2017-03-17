@@ -1,39 +1,30 @@
 ﻿@import "nativescript-theme-core/css/core.light.css";
 
-Label {
-  color: #190c03;
+.main-layout {
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.action-bar {
-  background-color: #fd7d24;
-  color: #190c03;
-}
-
-.type {
+Button {
   width: 100;
+  margin-bottom: 25;
   text-align: center;
-  margin-top: 10;
-  margin-bottom: 20;
-  margin-right: 10;
   padding: 12.5;
   border-radius: 5;
   horizontal-align: left;
 }
 
-.bubbles-label {
-  margin-top: 15;
-}
-.bubbles {
+.description {
   margin-top: 10;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
+  margin-bottom: 10;
 }
-.bubbles Button {
-  color: #190c03;
+.detail-layout {
+  flex-wrap: wrap;
+}
+.detail-layout Label {
+  padding: 5;
+  border-radius: 5;
   width: 100;
-  height: 100;
-  font-size: 18;
-  border-width: 1;
-  border-color: gray;
-  border-radius: 50;
+  margin-right: 10;
+  margin-bottom: 10;
+  text-align: center;
 }

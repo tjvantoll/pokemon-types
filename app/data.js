@@ -19,7 +19,7 @@ exports.types = [
   { name: "Fairy", backgroundColor: "#fdb9e9", color: "#212121" }
 ];
 
-exports.data = [
+exports.effectiveness = [
 
 // See http://pokemondb.net/type
 
