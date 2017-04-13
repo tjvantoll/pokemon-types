@@ -3,7 +3,7 @@
   class="page">
 
   <ActionBar
-    title="Pokémon Type Reference"
+    title="Pokémon Types"
     class="action-bar" />
 
   <StackLayout class="m-20">
