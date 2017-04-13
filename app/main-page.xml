@@ -6,7 +6,7 @@
     title="Pokémon Types"
     class="action-bar" />
 
-  <StackLayout class="m-20">
+  <StackLayout class="p-20">
     <Repeater items="{{ types }}">
       <Repeater.itemsLayout>
         <FlexboxLayout class="main-layout" />

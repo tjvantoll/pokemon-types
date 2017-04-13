@@ -9,7 +9,7 @@
     class="action-bar"></ActionBar>
 
   <ScrollView>
-    <StackLayout class="m-20">
+    <StackLayout class="p-20">
       <Label class="h2" text="Attack" />
       <StackLayout class="hr-light" />
 
