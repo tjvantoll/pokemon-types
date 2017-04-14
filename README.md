@@ -2,6 +2,8 @@
 
 Pokémon Types is a NativeScript-built iOS and Android app for learning Pokémon type advantages.
 
+[![](https://github.com/tjvantoll/city-search-challenge/raw/master/assets/App-Store-Icons/google-play.png)](https://play.google.com/store/apps/details?id=com.tjvantoll.pokemontypereference)
+
 ![](http://i.imgur.com/CT6vUlr.png)
 ![](http://i.imgur.com/IUiLy5K.png)
 ![](http://i.imgur.com/A24YrxP.png)
