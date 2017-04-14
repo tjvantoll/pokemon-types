@@ -8,7 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.pokemontypequiz" 
+    applicationId = "com.tjvantoll.pokemontypereference" 
     
     //override supported platforms
     // ndk {
