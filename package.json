@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.2",
-    "tns-core-modules": "2.5.2",
-    "tns-core-modules-snapshot": "2.5.2-5.5.372.32"
+    "tns-core-modules": "2.5.2"
   },
   "devDependencies": {
     "babel-traverse": "6.23.1",
