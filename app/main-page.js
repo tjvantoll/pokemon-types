@@ -21,4 +21,3 @@ exports.navigate = function(args) {
     }
   });
 }
-

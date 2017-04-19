@@ -22,7 +22,7 @@
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves are ' }}" />
               <Span text="super effective" fontAttributes="Bold" fontSize="16" />
-              <Span text=" against:" />
+              <Span text=" (2x) against:" />
             </FormattedString.spans>
           </FormattedString>
         </Label.formattedText>
@@ -30,7 +30,28 @@
       <Repeater items="{{ attackSuperEffective }}">
         <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
         <Repeater.itemTemplate>
-          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ attackEffective.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="{{ type.name + '-type moves are ' }}" />
+              <Span text="effective" fontAttributes="Bold" fontSize="16" />
+              <Span text=" (1x) against:" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ attackEffective }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
         </Repeater.itemTemplate>
       </Repeater>
 
@@ -43,7 +64,7 @@
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves are ' }}" />
               <Span text="not very effective" fontAttributes="Bold" fontSize="16" />
-              <Span text=" against:" />
+              <Span text=" (0.5x) against:" />
             </FormattedString.spans>
           </FormattedString>
         </Label.formattedText>
@@ -51,7 +72,7 @@
       <Repeater items="{{ attackNotEffective }}">
         <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
         <Repeater.itemTemplate>
-          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
         </Repeater.itemTemplate>
       </Repeater>
 
@@ -64,7 +85,7 @@
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves have ' }}" />
               <Span text="no effect" fontAttributes="Bold" fontSize="16" />
-              <Span text=" against:" />
+              <Span text=" (0x) against:" />
             </FormattedString.spans>
           </FormattedString>
         </Label.formattedText>
@@ -72,7 +93,7 @@
       <Repeater items="{{ attackNoEffect }}">
         <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
         <Repeater.itemTemplate>
-          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
         </Repeater.itemTemplate>
       </Repeater>
 
@@ -88,7 +109,7 @@
             <FormattedString.spans>
               <Span text="These types are " />
               <Span text="super effective" fontAttributes="Bold" fontSize="16" />
-              <Span text="{{ ' against ' + type.name + ' Pokémon:' }}" />
+              <Span text="{{ ' (2x) against ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
         </Label.formattedText>
@@ -96,7 +117,28 @@
       <Repeater items="{{ defenseSuperEffective }}">
         <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
         <Repeater.itemTemplate>
-          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
+        </Repeater.itemTemplate>
+      </Repeater>
+
+      <Label
+        class="description"
+        textWrap="true"
+        visibility="{{ defenseEffective.length == 0 ? 'collapse' : 'visible' }}">
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="These types are " />
+              <Span text="effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="{{ ' (1x) against ' + type.name + ' Pokémon:' }}" />
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+      </Label>
+      <Repeater items="{{ defenseEffective }}">
+        <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
         </Repeater.itemTemplate>
       </Repeater>
 
@@ -109,7 +151,7 @@
             <FormattedString.spans>
               <Span text="These types are " />
               <Span text="not very effective" fontAttributes="Bold" fontSize="16" />
-              <Span text="{{ ' against ' + type.name + ' Pokémon:' }}" />
+              <Span text="{{ ' (0.5x) against ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
         </Label.formattedText>
@@ -117,7 +159,7 @@
       <Repeater items="{{ defenseNotEffective }}">
         <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
         <Repeater.itemTemplate>
-          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
         </Repeater.itemTemplate>
       </Repeater>
 
@@ -130,7 +172,7 @@
             <FormattedString.spans>
               <Span text="These types have " />
               <Span text="no effect" fontAttributes="Bold" fontSize="16" />
-              <Span text="{{ ' on ' + type.name + ' Pokémon:' }}" />
+              <Span text="{{ ' (0x) on ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
         </Label.formattedText>
@@ -138,7 +180,7 @@
       <Repeater items="{{ defenseNoEffect }}">
         <Repeater.itemsLayout><FlexboxLayout class="detail-layout" /></Repeater.itemsLayout>
         <Repeater.itemTemplate>
-          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" />
+          <Label text="{{ name }}" backgroundColor="{{ backgroundColor }}" color="{{ color }}" tap="navigateToNewType" />
         </Repeater.itemTemplate>
       </Repeater>
     </StackLayout>

@@ -1,3 +1,4 @@
+var frameModule = require("ui/frame");
 var Observable = require("data/observable").Observable;
 
 var data = require("./data");
@@ -7,9 +8,11 @@ var page;
 var pageData;
 
 var attackSuperEffective;
+var attackEffective;
 var attackNotEffective;
 var attackNoEffect;
 var defenseSuperEffective;
+var defenseEffective;
 var defenseNotEffective;
 var defenseNoEffect;
 
@@ -19,9 +22,11 @@ exports.onNavigatingTo = function(args) {
   page.bindingContext = pageData;
 
   attackSuperEffective = [];
+  attackEffective = [];
   attackNotEffective = [];
   attackNoEffect = [];
   defenseSuperEffective = [];
+  defenseEffective = [];
   defenseNotEffective = [];
   defenseNoEffect = [];
 
@@ -32,6 +37,8 @@ exports.onNavigatingTo = function(args) {
       attackNoEffect.push(referenceType);
     } else if (attackEffectiveness === 0.5) {
       attackNotEffective.push(referenceType);
+    } else if (attackEffectiveness === 1) {
+      attackEffective.push(referenceType);
     } else if (attackEffectiveness === 2) {
       attackSuperEffective.push(referenceType);
     }
@@ -41,15 +48,28 @@ exports.onNavigatingTo = function(args) {
       defenseNoEffect.push(referenceType);
     } else if (defenseEffectiveness === 0.5) {
       defenseNotEffective.push(referenceType);
+    } else if (defenseEffectiveness === 1) {
+      defenseEffective.push(referenceType);
     } else if (defenseEffectiveness === 2) {
       defenseSuperEffective.push(referenceType);
     }
   });
 
   pageData.set("attackSuperEffective", attackSuperEffective);
+  pageData.set("attackEffective", attackEffective);
   pageData.set("attackNotEffective", attackNotEffective);
   pageData.set("attackNoEffect", attackNoEffect);
   pageData.set("defenseSuperEffective", defenseSuperEffective);
+  pageData.set("defenseEffective", defenseEffective);
   pageData.set("defenseNotEffective", defenseNotEffective);
   pageData.set("defenseNoEffect", defenseNoEffect);
 };
+
+exports.navigateToNewType = function(args) {
+  frameModule.topmost().navigate({
+    moduleName: "detail-page",
+    context: {
+      type: args.object.bindingContext
+    }
+  });
+}
