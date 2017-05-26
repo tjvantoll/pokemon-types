@@ -18,7 +18,8 @@ var defenseNoEffect;
 
 exports.onNavigatingTo = function(args) {
   page = args.object;
-  pageData = new Observable(page.navigationContext);
+  pageData = new Observable();
+  pageData.set("type", page.navigationContext.type);
   page.bindingContext = pageData;
 
   attackSuperEffective = [];

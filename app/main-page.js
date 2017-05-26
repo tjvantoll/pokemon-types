@@ -10,7 +10,7 @@ pageData.set("types", data.types);
 
 exports.onNavigatingTo = function(args) {
   page = args.object;
-  page.bindingContext = pageData;0
+  page.bindingContext = pageData;
 };
 
 exports.navigate = function(args) {

@@ -21,7 +21,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves are ' }}" />
-              <Span text="super effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="super effective" fontWeight="bold" fontSize="16" />
               <Span text=" (2x) against:" />
             </FormattedString.spans>
           </FormattedString>
@@ -42,7 +42,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves are ' }}" />
-              <Span text="effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="effective" fontWeight="bold" fontSize="16" />
               <Span text=" (1x) against:" />
             </FormattedString.spans>
           </FormattedString>
@@ -63,7 +63,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves are ' }}" />
-              <Span text="not very effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="not very effective" fontWeight="bold" fontSize="16" />
               <Span text=" (0.5x) against:" />
             </FormattedString.spans>
           </FormattedString>
@@ -84,7 +84,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="{{ type.name + '-type moves have ' }}" />
-              <Span text="no effect" fontAttributes="Bold" fontSize="16" />
+              <Span text="no effect" fontWeight="bold" fontSize="16" />
               <Span text=" (0x) against:" />
             </FormattedString.spans>
           </FormattedString>
@@ -108,7 +108,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="These types are " />
-              <Span text="super effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="super effective" fontWeight="bold" fontSize="16" />
               <Span text="{{ ' (2x) against ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
@@ -129,7 +129,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="These types are " />
-              <Span text="effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="effective" fontWeight="bold" fontSize="16" />
               <Span text="{{ ' (1x) against ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
@@ -150,7 +150,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="These types are " />
-              <Span text="not very effective" fontAttributes="Bold" fontSize="16" />
+              <Span text="not very effective" fontWeight="bold" fontSize="16" />
               <Span text="{{ ' (0.5x) against ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
@@ -171,7 +171,7 @@
           <FormattedString>
             <FormattedString.spans>
               <Span text="These types have " />
-              <Span text="no effect" fontAttributes="Bold" fontSize="16" />
+              <Span text="no effect" fontWeight="bold" fontSize="16" />
               <Span text="{{ ' (0x) on ' + type.name + ' Pokémon:' }}" />
             </FormattedString.spans>
           </FormattedString>
