@@ -5,21 +5,14 @@
   "nativescript": {
     "id": "com.tjvantoll.pokemontypereference",
     "tns-android": {
-      "version": "3.0.0"
+      "version": "3.1.0"
     },
     "tns-ios": {
-      "version": "3.0.1"
+      "version": "3.1.0"
     }
   },
   "dependencies": {
     "nativescript-theme-core": "~1.0.4",
-    "tns-core-modules": "~3.0.1"
-  },
-  "devDependencies": {
-    "babel-traverse": "6.23.1",
-    "babel-types": "6.23.0",
-    "babylon": "6.16.1",
-    "lazy": "1.0.11",
-    "nativescript-dev-android-snapshot": "^0.*.*"
+    "tns-core-modules": "~3.1.0"
   }
 }
