@@ -6,20 +6,22 @@
     title="Pokémon Types"
     class="action-bar" />
 
-  <StackLayout class="p-20">
-    <Repeater items="{{ types }}">
-      <Repeater.itemsLayout>
-        <FlexboxLayout class="main-layout" />
-      </Repeater.itemsLayout>
-      <Repeater.itemTemplate>
-        <StackLayout>
-          <Button
-            tap="navigate"
-            text="{{ name }}"
-            backgroundColor="{{ backgroundColor }}"
-            color="{{ color }}" />
-        </StackLayout>
-      </Repeater.itemTemplate>
-    </Repeater>
-  </StackLayout>
+  <ScrollView>
+    <StackLayout class="p-20">
+      <Repeater items="{{ types }}">
+        <Repeater.itemsLayout>
+          <FlexboxLayout class="main-layout" />
+        </Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <StackLayout>
+            <Button
+              tap="navigate"
+              text="{{ name }}"
+              backgroundColor="{{ backgroundColor }}"
+              color="{{ color }}" />
+          </StackLayout>
+        </Repeater.itemTemplate>
+      </Repeater>
+    </StackLayout>
+  </ScrollView>
 </Page>

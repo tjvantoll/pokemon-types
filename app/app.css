@@ -1,16 +1,16 @@
-﻿@import "nativescript-theme-core/css/core.light.css";
+﻿@import "~nativescript-theme-core/css/core.light.css";
 
 .main-layout {
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 Button {
-  width: 100;
-  margin-bottom: 25;
+  width: 300;
   text-align: center;
   padding: 12.5;
   border-radius: 5;
-  horizontal-align: left;
+  horizontal-align: center;
+  margin: 0 25 25 25;
 }
 
 .description {

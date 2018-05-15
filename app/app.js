@@ -1,2 +1,4 @@
+require("./bundle-config");
 var application = require("application");
-application.start({ moduleName: "main-page" });
+
+application.run({ moduleName: "app-root" });
